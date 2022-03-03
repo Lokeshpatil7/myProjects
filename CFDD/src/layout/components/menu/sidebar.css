@@ -1,0 +1,12 @@
+.da-sidebar {
+  height: 100vh;
+  background-image: url(https://bbbemodule.web.app/sidenav-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  z-index: 4;
+}
+
+.ant-menu {
+  background: transparent;
+}

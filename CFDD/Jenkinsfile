@@ -1,0 +1,63 @@
+def AGENT_LABEL = null
+def BUCKET_NAME = null
+
+node('master') {
+  stage('Checkout and set agent'){
+     checkout scm
+     if (env.BRANCH_NAME == 'development') {
+        AGENT_LABEL = "dev-slave-agent"
+        BUCKET_NAME = "dev.clientsappdemo.com"
+     } else if (env.BRANCH_NAME == 'release/uat'){
+        AGENT_LABEL = "prod-slave-agent"
+        BUCKET_NAME = "uat.clientsappdemo.com"
+     }
+     else{
+       AGENT_LABEL = "master"
+     }
+   }
+}
+
+pipeline {
+ agent {
+       label "${AGENT_LABEL}"
+    }
+
+tools {nodejs "node"}
+          
+  environment {
+    CI = 'true'
+     }
+  
+  stages {
+    stage('Install') {
+      steps {
+        sh ' node -v'
+        echo "Running in ${AGENT_LABEL}"
+        echo "Using Branch >> ${env.BRANCH_NAME}"
+        sh "hostname"
+        sh "chmod +x -R ${env.WORKSPACE}"
+        sh ' npm install -S --unsafe-perm=true --allow-root'
+        sh 'npm install @craco/craco --save '
+        echo " I have done installation"
+        echo " I have done installation using npm"
+      }
+    }
+      stage('Build') {
+      steps {
+            sh 'chmod +x ./deliver.sh'
+            sh ' ./deliver.sh'    
+            echo " I have done build"
+            echo " I have done build using npm"
+      }
+     }
+       stage('Upload-Build') {
+             steps {
+               withAWS(region:'ap-southeast-1',credentials:'jenkins_s3_access ') {
+               s3Delete(bucket: "${BUCKET_NAME}", path:'**/*')
+               s3Upload(bucket: "${BUCKET_NAME}", workingDir:'build', includePathPattern:'**/*');
+               echo " I have uploaded build in ${BUCKET_NAME} bucket "
+            }
+         }
+      }
+    }
+}

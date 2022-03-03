@@ -1,0 +1,8 @@
+.ant-menu-item-selected.moreOptions {
+    background: blue;
+    color: black ;
+}
+
+.ant-menu-horizontal.ant-menu-item-selected.moreOptions {
+    background: green; /*Overriden property*/
+  }

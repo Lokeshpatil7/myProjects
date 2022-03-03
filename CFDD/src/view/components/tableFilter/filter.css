@@ -1,0 +1,72 @@
+.filter-parent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-div {
+  display: flex;
+}
+
+.right-arrow {
+  font-size: 25px;
+  color: #92979d;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  /* width : fit-content; */
+  /* text-shadow: -8px 9px 19px -9px rgba(0,0,0,0.59); */
+}
+
+.left-arrow {
+  font-size: 25px;
+  color: #92979d;
+  margin-top: 2px;
+  margin-right: 10px;
+
+}
+
+/* .left-arrow-div {
+  box-shadow: 10px 10px 10px -10px rgba(0,0,0,0.59);
+  height: 100%;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+.right-arrow-div {
+  box-shadow: -11px 10px 10px -10px rgba(0,0,0,0.59);
+  height: 100%;
+  border-radius: 100%;
+  border-bottom-left-radius: 230px;
+  border-bottom-right-radius: -50px;
+} */
+
+.hide-arrows {
+  display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  display: flex;
+  height: max-content;
+  overflow-y: hidden;
+  position: relative;
+  /* margin: 0px 10px; */
+}
+
+/* .react-horizontal-scrolling-menu--wrapper{
+  background-color: gray;
+  width: 100%;
+} */
+
+.ant-dropdown-trigger.mydropdown {
+  border: 1px solid #4f4f4f;
+}
+
+.ant-dropdown-link.mydropdown {
+  border: 1px solid #4f4f4f;
+}
+
+@media only screen and (max-width: 900px) {
+  .right-arrow {
+    font-size: 25px;
+    color: #92979d;
+  }
+}

@@ -1,0 +1,10 @@
+.composeModal .ant-modal-header {
+    padding : 0px;
+  }
+  .composeModal .ant-modal-close-x {
+    visibility: hidden;
+  }
+
+  .viewDocument .ant-modal-close-x {
+    visibility: hidden;
+  }

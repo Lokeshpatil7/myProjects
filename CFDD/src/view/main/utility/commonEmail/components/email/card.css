@@ -1,0 +1,11 @@
+.name {
+    font-weight: bold;
+    font-size: 16px;
+    margin : 0 5px
+}
+
+.attachments {
+    margin : 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
