@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fury {
+  margin-left: 500px;
+  margin-top: 40px;
+}
+.mb-3 {
+  width: 400px;
+}
+.form {
+  margin-left: 500px;
+  margin-top: 40px;
+}
+.tr {
+  font-weight: bolder;
+  font-size: larger;
+}
+.H1 {
+  font-size: 20px;
+  margin-left: 250px;
+  margin-top: 20px;
+}
+.b1 {
+  width: 100px;
+  margin-left: 300px;
+}
+.avengers {
+  margin-left: 250px;
+  margin-top: 30px;
+  font-size: 25px;
+}
+.captainFury {
+  font-size: 25px;
+  color: white;
+}
+.checkMission {
+  margin-top: 20px;
+}

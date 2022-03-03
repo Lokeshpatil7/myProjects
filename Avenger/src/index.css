@@ -1,0 +1,107 @@
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:  #33ffac ;
+  background-image: url("./color/11930.jpg");
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+ .Navbar{
+  font-weight: bolder;
+  font-size:30px;
+  margin: left 100px;;
+
+ 
+}
+input{
+  size: 10px;
+   margin-top: 30px;
+   margin-left: 100px;
+   height: 30px;
+   background-color:darkgray;
+   border-radius: 10px;
+}
+.heading{
+  margin-left: 100px;
+  font-weight: bolder;
+  color: brown;
+
+}
+.btun{
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: cadetblue;
+  font-weight: bolder;
+
+}
+.link{
+  display: flex;
+  justify-content: right;
+  color: black;
+  font-size: large;
+  margin-right: 160px;
+}
+.video{
+  display: inline-block;
+  padding: 50px;
+  margin-left: 330px;
+  margin-top: 30px;
+}
+
+.pokemonList{
+  background-color: #3ff78cc7;
+  height: 400px;
+  width: 400px;
+  justify-content: center;
+  padding-left: 145px;
+  margin-left:100px;
+  margin-top: 20px;
+}
+.container-fluid{
+  background-color: rgb(46, 165, 42);
+  height: 70px;
+}
+.link1{
+    font-size: large;
+    font-weight: bolder;
+     color: black;
+     padding: 20px;
+}
+.link2{
+  font-size: large;
+  font-weight: bolder;
+   color: black;
+   padding: 20px;
+}
+.link3{
+  font-size: large;
+  font-weight: bolder;
+   color: black;
+   padding: 20px;
+}
+.navbar{
+  font-size: x-large;
+  color: black;
+  font-weight: bolder;
+}
+.th{
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+ margin-right: 600px;
+ color: brown;
+ font-size: 300px;
+  
+
+}
